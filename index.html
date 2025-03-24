@@ -412,7 +412,19 @@
 };
 
   </script>
-  
+  <script>
+  function autoScroll() {
+    let scrollSpeed = 2; // Kecepatan scroll (px per interval)
+    let interval = setInterval(function() {
+      window.scrollBy(0, scrollSpeed); // Scroll turun perlahan
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        clearInterval(interval); // Hentikan jika sudah sampai bawah
+      }
+    }, 50); // Interval waktu dalam milidetik
+  }
+
+  window.onload = autoScroll;
+</script>
 </body>
 
 </html>
