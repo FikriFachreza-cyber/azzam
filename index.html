@@ -27,16 +27,18 @@
 <body>
 
   <section id="hero"
-    class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white" data-aos="fade-up">
-    <main>
-      <h4>Kepada Yth. Bapak/Ibu/Saudara/i <span></span></h4>
+    class="hero w-00 h-100 p-3 mx-auto text-center d-flex align-items-center text-white" data-aos="fade-up">
+    <main style="margin: 0 auto; display: block; text-align: center; min-height: 80vh; display: flex; flex-direction: column; justify-content: flex-end;">
+      <p>Tasyakuran Khitan</p>
       <h1>Naufal Azzam</h1>
-      <p>Akan Melangsungkan Acara Tasyakuran Khitanan</p>
+      <h4>Kepada Yth. Bapak/Ibu/Saudara/i </br></br></h4>
+      <h5><span></span></h5>
       <div class="simply-countdown"></div>
       <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
     </main>
+</section>
 
-  </section>
+
 
   <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
     <div class="container">
@@ -71,7 +73,7 @@
 
       <div class="row couple text-center justify-content-center">
         <div class="col-lg-6 d-flex flex-column align-items-center">
-            <img src="naufal1.jpeg" alt="Naufal Azzam" class="img-responsive rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;">
+            <img src="img/naufal1.jpeg" alt="Naufal Azzam" class="img-responsive rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;">
             <h3>Naufal Azzam</h3>
             <p>Azzam adalah anak yang periang dan ceria, dia selalu membuat kami tertawa dan tersenyum.</p>
             <p>Putra dari Bpk. Nova Ariadi <br> dan <br> Ibu Evalina Mayasari Sinurat, SE</p>
@@ -439,10 +441,10 @@
     const pronoun = hashParams.get('p') || '';
 
     // Ambil elemen target
-    const namaContainer = document.querySelector('.hero h4 span');
+    const namaContainer = document.querySelector('.hero h5 span');
     if (namaContainer) {
         // Jika pronoun kosong, hanya tampilkan nama
-        namaContainer.innerText = pronoun ? `${pronoun} ${nama},` : `${nama},`;
+        namaContainer.innerText = pronoun ? `${pronoun} ${nama}` : `${nama}`;
     }
 
     // Set nilai input (jika ada)
